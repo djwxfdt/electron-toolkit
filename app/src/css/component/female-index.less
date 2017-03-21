@@ -1,0 +1,354 @@
+.carousel-enter {
+  opacity: 0.01;
+}
+
+.carousel-enter.carousel-enter-active {
+   opacity: 1;
+  transition: all 1000ms ease-in;
+}
+
+.carousel-leave {
+  opacity: 1;
+}
+
+.carousel-leave.carousel-leave-active {
+  opacity: 0.01;
+  transition: opacity 1000ms ease-in;
+}
+
+.female-container{
+    .banner{
+        height: 285px;
+        margin-top: 36px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        border: solid 1px #e6e6e6;
+        align-items: center;
+        .carousel{
+            height: 273px;
+            width:680px;
+            // background-image: url(../../images/test/banner.png);
+
+            position: relative;
+            .item{
+                position: absolute;
+                background-position: center;
+                background-repeat: no-repeat;
+                width:100%;
+                height: 100%;
+                left:0;
+                top:0;
+                background-size: cover;
+            }
+            .dot-div{
+                position: absolute;
+                height: 20px;
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                bottom: 5px;
+                left:0;
+                justify-content: center;
+                align-items: center;
+                .dot{
+                    width:12px;
+                    height: 12px;
+                    background-image: url(../../images/clothes/dot.png);
+                    &.active{
+                        background-image: url(../../images/clothes/dot2.png);
+                    }
+                    margin: 0 5px;
+                }
+            }
+        }
+        .right-banner{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            align-items: center;
+            height: 273px;
+            justify-content: space-between;
+
+            .item{
+                width: 353px;
+                height: 84px;
+            }
+
+        }
+
+    }
+
+    .recommend-shop{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .title{
+            height: 108px;
+            width: 324px;
+            background: url(../../images/rec-shop.png) center no-repeat;
+        }
+        .list{
+            height: 185px;
+            width: 100%;
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+            border: solid 1px #e6e6e6;
+
+            .item{
+                width: 190px;
+                height: 40px;
+                // background-image: url(../../images/test/shop.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            .shop2{
+                background-image: url(../../images/test/shop2.png);
+            }
+            .shop3{
+                background-image: url(../../images/test/shop3.png);
+            }
+            .shop4{
+                background-image: url(../../images/test/shop4.png);
+            }
+            .shop5{
+                background-image: url(../../images/test/shop5.png);
+            }
+            .shop6{
+                background-image: url(../../images/test/shop6.png);
+            }
+            .shop7{
+                background-image: url(../../images/test/shop7.png);
+            }
+            .shop8{
+                background-image: url(../../images/test/shop8.png);
+            }
+            .shop9{
+                background-image: url(../../images/test/shop9.png);
+            }
+            .shop10{
+                background-image: url(../../images/test/shop10.png);
+            }
+
+        }
+
+    }
+
+
+    .female-list{
+        width:100%;
+        display: flex;
+        margin-top: 10px;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        border: solid 1px #e6e6e6;
+
+        .list{
+            display: flex;
+            padding: 10px;
+            width:calc("100%-20px");
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .item{
+                display: flex;
+                width: 238px;
+                height: 320px;
+                margin-bottom: 25px;
+                // margin-right: 20px;
+
+                &:nth-child(4n){
+                    margin-right: 0px;
+                }
+                &.male-icon{
+                    background-image: url(../../images/clothes/male.png);
+                }
+                &.icon{
+                    background-image: url(../../images/clothes/female.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size:contain;
+                }
+                &.card{
+                    display: flex;
+                    flex-direction: column;
+                    .cover{
+                        width: 238px;
+                        height: 253px;
+                        //background-image: url(../../images/clothes/test.png);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+
+                    }
+                    .title{
+                        font-family: "微软雅黑";
+                        font-size: 14px;
+                        color: #808080;
+                        line-height: 24px;
+                    }
+                    .bottom{
+                        height: 42px;
+                        display: flex;
+                        align-items: center;
+                        flex-grow: 1;
+                        align-items: flex-end;
+                        justify-content: space-between;
+                        .price{
+                            display: block;
+                            background-color: #f74e4e;
+                            line-height: 42px;
+                            font-family: "微软雅黑";
+                            font-size: 24px;
+                            color: white;
+                            border-top-right-radius: 21px;
+                            border-bottom-right-radius: 21px;
+                            padding-right: 15px;
+                        }
+                        .mall{
+                            align-self: center;
+                            background-image: url(../../images/clothes/mall.png);
+                            background-position: left;
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            height: 14px;
+                            padding-left: 22px;
+                            font-family: "宋体";
+                            font-size: 12px;
+                            color: #bfbfbf;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .more{
+            display: flex;
+            width: 410px;
+            height: 37px;
+            font-family: 微软雅黑;
+            font-size: 18px;
+            color: #bfbfbf;
+            justify-content: center;
+            align-items: center;
+            border-radius: 18px;
+            border: solid 1px #e6e6e6;
+            margin-bottom: 20px;
+            cursor:pointer;
+            &:hover{
+            background-color: #f74e4e;
+            color: white;
+            }
+            &:active{
+                background-color: #de3939;
+                color: white;
+            }
+
+        }
+    }
+
+    .guess-prefer{
+        width: 100%;
+        background-color: white;
+
+        .title{
+            height: 138px;
+            width: 100%;
+            background-image: url(../../images/clothes/prefer.png);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .list-content{
+            height: 245px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            .left{
+                width: 34px;
+                height: 62px;
+                background-image: url(../../images/clothes/left.png);
+                flex-shrink: 0;
+            }
+            .list{
+                flex-grow: 1;
+                display: flex;
+                justify-content: space-between;
+                .item{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    &:first-child{
+                        margin-left: 25px;
+                    }
+                    &:nth-child(5){
+                        margin-right: 25px;
+                    }
+                    .cover{
+                        margin-top: 20px;
+                        width: 160px;
+                        height: 185px;
+                        background-image: url(../../images/clothes/test2.png);
+                        border: solid 1px #e6e6e6;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+                    .text{
+                        font-family: 微软雅黑;
+                        font-size: 14px;
+                        color: #808080;
+                    }
+                }
+            }
+            .right{
+                flex-shrink: 0;
+                width: 34px;
+                height: 62px;
+                background-image: url(../../images/clothes/right.png);
+            }
+        }
+    }
+
+    .rec-shop{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        .title{
+            background-image: url(../../images/clothes/rec-shop.png);
+            width:448px;
+            height: 22px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .list{
+            margin-top: 20px;
+            width: 802px;
+            height: 128px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .item{
+                background-image: url(../../images/clothes/test4.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                width:120px;
+                height: 50px;
+                border: solid 1px #e6e6e6;
+            }
+        }
+    }
+
+}

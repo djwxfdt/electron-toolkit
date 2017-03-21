@@ -1,0 +1,66 @@
+.titlebar {
+	padding: 0 3px;
+	background-color: #f5f5f5;
+	border-radius:6px 6px 0 0;
+	flex-shrink: 0;
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.logo{
+		background-image: url(../../images/logo.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		height: 100%;
+		width: 80px;
+	}
+	.btn-area{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		width: 130px;
+		-webkit-app-region: no-drag;
+
+		.btn{
+			margin: 10px;
+			cursor: pointer;
+			height: 16px;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		.close{
+			width: 17px;
+			background-image: url(../../images/close.png);
+			&:hover{
+				background-image: url(../../images/close-hover.png);
+			}
+		}
+		.full{
+			width: 16px;
+			background-image: url(../../images/full.png);
+			&:hover{
+				background-image: url(../../images/full-hover.png);
+			}
+		}
+		.unfull{
+			width: 17px;
+			background-image: url(../../images/unfull.png);
+			&:hover{
+				background-image: url(../../images/unfull-hover.png);
+			}
+		}
+		.mini{
+			width: 16px;
+			background-image: url(../../images/mini.png);
+			&:hover{
+				background-image: url(../../images/mini-hover.png);
+			}
+		}
+
+	}
+}
+
+.titlebar.webkit-draggable {
+	-webkit-app-region: drag;
+}

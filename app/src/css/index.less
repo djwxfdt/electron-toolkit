@@ -1,0 +1,216 @@
+// @import "./component/check-transfer";
+// @import "./component/title-bar";
+
+html{
+    height: 100%;
+    border-radius: 20px;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    -webkit-user-select: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+.app{
+    margin:  5px;
+    box-shadow: 0px 0px 5px #333333;
+    border-radius: 6px;
+    height: -webkit-calc(100% - 1px);
+}
+
+
+
+.container{
+    height: 100%;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    .content{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        .top-title{
+            flex-shrink: 0;
+            width:100%;
+            position: relative;
+            height: 80px;
+            background: white;
+
+            .title{
+                height: 80px;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-end;
+                position: absolute;
+                 .icon{
+                    height: 40px;
+                    margin-right: 20px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            .tool{
+                background-color: #3d9cf4;
+                .icon{
+                    background-image: url("../images/tool-bg.png");
+                    width: 149px;
+                }
+            }
+            .female{
+                background-color: #ff4e74;
+                .icon{
+                    background-image: url("../images/female-bg.png");
+                    width: 176px;
+                }
+            }
+            .sale{
+                background-color: #f95d2d;
+                .icon{
+                    background-image: url("../images/sale-bg.png");
+                    width: 148px;
+                }
+            }
+        }
+
+        .center-content{
+            display: flex;
+            flex-grow: 1;
+            flex-direction: row;
+             .left-navigations{
+                width: 80px;
+                border-radius: 0 0 0 6px;
+                background-color: #f0f0f0;
+                padding-bottom: 5px;
+                display: flex;
+                flex-direction: column;
+                align-items:  flex-start;
+                a{
+                    color: black;
+                    width:80px;
+                    height:80px;
+                    margin: 3px 0;
+                }
+
+                .active{
+                    color: red;
+                }
+                .tool{
+                    background: url(../images/tool-tab.png);
+                }
+                .female{
+                    background: url(../images/female-tab.png);
+                }
+                .sale{
+                    background: url(../images/sale-tab.png);
+                }
+
+            }
+            .right-contents{
+                flex-grow: 1;
+                background-color: #f0f0f0;
+                border-radius: 0 0 6px 0;
+                display: flex;
+                padding-bottom: 5px;
+                position: relative;
+
+                .tool-container{
+                    position: absolute;
+                    display: flex;
+                    flex-grow: 1;
+                    width: 100%;
+                    height: 100%;
+                }
+                .female-container{
+                    position: absolute;
+                    display: flex;
+                    flex-grow: 1;
+                    width: 100%;
+                    height: 100%;
+                    justify-content: center;
+                    overflow-y: auto
+                }
+                 .sale-container{
+                    position: absolute;
+                    display: flex;
+                    flex-grow: 1;
+                    width: 100%;
+                    height: 100%;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+
+    }
+}
+
+
+.example-enter {
+  left: -100%;
+  z-index: 1;
+}
+
+.example-enter.example-enter-active {
+  left: 0;
+  transition: all 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+
+.router-enter {
+//   opacity: 0;
+  right: -100%;
+  z-index: 1;
+}
+
+.router-enter.router-enter-active {
+//    opacity: 1;
+   right: 0;
+  transition: all 500ms ease-in;
+}
+
+.router-leave {
+  opacity: 1;
+}
+
+.router-leave.router-leave-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in;
+}
+
+
+.nav-enter {
+  opacity: 0.01;
+}
+
+.nav-enter.nav-enter-active {
+   opacity: 1;
+  transition: all 500ms ease-in;
+}
+
+.nav-leave {
+  opacity: 1;
+}
+
+.nav-leave.nav-leave-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in;
+}

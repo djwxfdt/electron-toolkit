@@ -1,0 +1,37 @@
+{
+  "name": "tookit",
+  "version": "1.0.0",
+  "description": "electron toolkit",
+  "main": "./app/main.js",
+  "private": true,
+  "build": {
+    "app-bundle-id": "github.djwxfdt",
+    "app-category-type": "public.app-category.developer-tools"
+  },
+  "scripts": {
+    "start": "cd app && electron .",
+    "watch": "webpack --watch",
+    "install:electron": "ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/ npm i electron"
+  },
+  "author": "",
+  "dependencies": {
+    "localforage": "^1.5.0",
+    "react": "^15.4.2",
+    "react-addons-css-transition-group": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-router": "^4.0.0",
+    "react-router-dom": "^4.0.0",
+    "react-timer-mixin": "^0.13.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "css-loader": "^0.27.3",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.0",
+    "style-loader": "^0.15.0",
+    "webpack": "^2.2.1"
+  }
+}
