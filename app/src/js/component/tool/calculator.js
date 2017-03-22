@@ -1,5 +1,5 @@
 import React from 'react'
-// require('../../../css/component/calculator.less')
+require('../../../css/component/calculator.less')
 
 export default class Calculator extends React.Component{
 

@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "cd app && electron .",
-    "watch": "webpack --watch",
+    "watch": "webpack --watch --display-error-details",
     "install:electron": "ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/ npm i electron"
   },
   "author": "",
@@ -29,8 +29,9 @@
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0",
     "css-loader": "^0.27.3",
+    "file-loader": "^0.10.1",
     "less": "^2.7.2",
-    "less-loader": "^4.0.0",
+    "less-loader": "^4.0.2",
     "style-loader": "^0.15.0",
     "webpack": "^2.2.1"
   }

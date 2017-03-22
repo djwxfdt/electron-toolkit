@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Link} from 'react-router-dom';
 
-// require('../../css/component/tool-container.less')
+require('../../css/component/tool-container.less')
 
 
 export default class ToolContainer extends React.Component{

@@ -1,5 +1,5 @@
 import React from 'react'
-// require('../../../css/component/check-transfer.less')
+require('../../../css/component/check-transfer.less')
 
 let json_list = require('../../../json/express-list.json');
 

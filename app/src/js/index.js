@@ -9,7 +9,7 @@ import {Link, BrowserRouter as Router, Route} from 'react-router-dom'
 
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
-// require('less-loader!../css/index.less')
+require('../css/index.less')
 
 import TitleBar from './component/title-bar'
 import ToolContainer from './component/tool-container'

@@ -2,7 +2,7 @@
 
 
 import React from 'react'
-// require('../../css/component/title-bar.less')
+require('../../css/component/title-bar.less')
 const electron = window.require('electron');
 const remote = electron.remote;
 

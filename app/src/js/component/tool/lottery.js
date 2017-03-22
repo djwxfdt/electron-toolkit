@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-// require('../../../css/component/lottery.less')
+require('../../../css/component/lottery.less')
 
 
 export default class Lottery extends React.Component{
