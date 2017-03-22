@@ -12,7 +12,7 @@ var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 require('../css/index.less')
 
 import TitleBar from './component/title-bar'
-import ToolContainer from './component/tool-container'
+import * as Tools from './component/tool-container'
 
 class App extends React.Component {
     static defaultProps = {
@@ -25,7 +25,6 @@ class App extends React.Component {
         ]
     };
     componentDidMount() {
-        window.location.href = "#/tool";
     }
 
     render() {
@@ -34,24 +33,24 @@ class App extends React.Component {
                     <TitleBar/>
                     <div className="content">
                         <ReactCSSTransitionGroup className="top-title" transitionName="example" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
-                            {/* {(() => {
-                                if (url.indexOf('/tool') == 0 || url == "/") {
-                                    return <div className="tool title" key="tool">
-                                        <a className="icon" href="#/tool"></a>
-                                    </div >
-                                }
-                            })()} */}
+                            <div className="tool title" key="tool">
+                               <Link to="/tool" className="icon"></Link>
+                           </div >
                         </ReactCSSTransitionGroup>
                         <div className="center-content">
                             <ReactCSSTransitionGroup component="div" className="left-navigations" transitionName="nav" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
-                                {/* {this.props.links.map(function(link, index) {
-                                    if (url.indexOf(link.url) != 0)
-                                        return <Link className={link.key} to={link.url} activeClassName="active" key={index}></Link>
-                                })} */}
+                                {this.props.links.map(function(link, index) {
+                                    return <Link className={link.key} to={link.url}  key={index}></Link>
+                                })}
                             </ReactCSSTransitionGroup>
 
                             <ReactCSSTransitionGroup component="div" transitionName="router" className="right-contents" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
-                                <Route path="/" key="tool" component={ToolContainer} />
+                                <Route path="/tool" key="tool" exact={true} component={Tools.Index} />
+                                <Route path="/tool/check-transfer" key="check" component={Tools.ToolTransfer} />
+                                <Route path="/tool/call-express" key="call" component={Tools.ToolCall} />
+                                <Route path="/tool/lottery" key="lottery" component={Tools.ToolLottery} />
+                                <Route path="/tool/calculator" key="calculator" component={Tools.ToolCalculator} />
+
                             </ReactCSSTransitionGroup>
 
                         </div>

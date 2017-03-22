@@ -2,10 +2,16 @@ import React from 'react'
 
 import { Link} from 'react-router-dom';
 
+import CheckTransfer from "./tool/check-transfer.js"
+import CallExpress from "./tool/call-express.js"
+import Calculator from "./tool/calculator.js"
+import Lottery from "./tool/lottery.js"
+
+
 require('../../css/component/tool-container.less')
 
 
-export default class ToolContainer extends React.Component{
+export class Index extends React.Component{
 
     static defaultProps = {
         links:[
@@ -18,27 +24,21 @@ export default class ToolContainer extends React.Component{
     render(){
         return(
             <div className="tool-container" style={{justifyContent:"center",alignItems:"center"}}>
-            {(()=>{
-                if(this.props.children){
-                    return this.props.children
+                <div style={{display:"flex",flexWrap:"wrap",justifyContent:"space-between",width:"780px"}}>
+                {
+                    this.props.links.map((link,index)=>{
+                        return(
+                                <Link to={link.path}  className={link.key} key={index}></Link>
+                        )
+                    })
                 }
-                else{
-                    return (
-                        <div style={{display:"flex",flexWrap:"wrap",justifyContent:"space-between",width:"780px"}}>
-                        {
-                            this.props.links.map((link,index)=>{
-                                return(
-                                        <Link to={link.path} activeClassName="active" className={link.key} key={index}></Link>
-                                )
-                            })
-                        }
-                        </div>
-
-                    )
-                }
-            })()}
-
+                </div>
             </div>
         )
     }
 }
+
+export const ToolTransfer = props =><div className="tool-container" style={{justifyContent:"center",alignItems:"center"}}><CheckTransfer /></div>
+export const ToolCalculator = props =><div className="tool-container" style={{justifyContent:"center",alignItems:"center"}}><Calculator /></div>
+export const ToolCall = props =><div className="tool-container" style={{justifyContent:"center",alignItems:"center"}}><CallExpress /></div>
+export const ToolLottery = props =><div className="tool-container" style={{justifyContent:"center",alignItems:"center"}}><Lottery /></div>
